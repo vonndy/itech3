@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type = "text/css">
+		h1, h3, a { 
+			font-family: Courier, monospace; 
+		}
+		</style>		
+		<h1>Лабораторная работа №3</h1>		
+	</head>
+	<body>
+		<h3>click on the picture to change</h3>
+		<img name = "image" alt = "image" height = 500 width = 500 style = "border: 25px solid black" src = "images/1.jpg" onclick = "changeImage();">
+		<script type = "text/javascript" language = "JavaScript" >
+			function changeImage(){
+				document.image.src = "images//" + (Math.floor(Math.random() * Math.floor(9)) + 1) + ".jpg";
+			}
+			function change(){
+				document.image.height = parseInt(changes.h.value);
+				document.image.width = parseInt(changes.w.value);
+				document.image.alt = changes.alt.value;
+				document.image.style = "border: " + changes.b.value + "px solid " + changes.c.value;
+			}			
+		</script>		
+		<form name = "changes">
+			<br>
+			<a>heigh: 			 </a><input type = "text" name = "heigth" id = "h" value = "550"><br>
+			<br>
+			<a>width:            </a><input type = "text" name = "width" id = "w" value = "550"><br>
+			<br>
+			<a>alternative text: </a><input type = "text" name = "alternative_text" id = "alt" value = "image"><br>
+			<br>
+			<a>border:           </a><input type = "text" name = "border" id = "b" value = "25"><br>
+			<br>
+			<a>colour of border: </a><input type = "text" name = "colour" id = "c" value = "black"><br>
+			<br>
+			<input type = "button" onclick = "change();" value = "change"><br>
+		</form>
+	</body>
+</html>
